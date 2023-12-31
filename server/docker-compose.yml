@@ -1,0 +1,16 @@
+version : '3.4'
+
+services:
+  postgress:
+    container_name: unityzen-db
+    image: postgres
+    ports:
+      - 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: unityzen
+      POSTGRES_PASSWORD: unityzen
+volumes:
+  postgres_data:
